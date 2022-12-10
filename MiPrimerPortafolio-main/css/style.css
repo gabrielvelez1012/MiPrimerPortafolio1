@@ -11,151 +11,118 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+}
+img{
+    width: 100px;
 }
 body{
     background-color: var(--dark-grey);
     font-family: Montserrat, sans-serif;
-    text-align: center;
-    
 }
-img{
-    max-width: 100%;
-}
-.header{
-    background-color: var(--dark-grey);
-    height: 12vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    padding: 5vmin;
-}
-.menu{
-    position: fixed;
-    top: 0;
-    left: -400px;
-    width: 90%;
-    height: 15vh;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 5vmin;
-    gap: 3vmin;
-    transition: 0.5s;
-}
-.items{
-    color: white;
-    text-decoration: none;
-}
-#check{
+header{
     display: none;
 }
-.checkbtn{
-    color: white;
-}
-#check:checked ~ .menu{
-    left: 0;
-    transition: 0.5s;
-}
-
-
-#perfil{
-    background-color: var(--dark-grey);
-    height: 40vmax;
+section {
     width: 100%;
+    border: 1px solid white;
+}
+.section-info{
     display: flex;
     flex-direction: column;
-    padding: 5vmax;
+    justify-content: center;
     align-items: center;
-    gap: 5vmin;
 }
 .img-perfil{
-    width: 40vmin;
-
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    
 }
-
+.img-perfil img{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 180px;
+    height: 200px;
+    border-radius: 50%;
+}
 .description{
-    width: 80vmin;
-    height: 20vmax;
     gap: .5rem;
     display: flex;
     flex-direction: column;
-    
+    text-align: center;
 }
-
 .description h1{
-    font-size: 2vmax;
+    font-size: 5vmax;
     color: white;
 }
 .description h1 span{
     color: var(--green);
-    font-size: 3vmax;
+    font-size: 6vmax;
 }
 .description p{
     color: white;
-    font-size: 2vmax;
+    font-size: 3vmax;
 }
 .description p span{
     color: var(--green);
     font-size: 2vmax;
 }
-
+.logo-perfil{
+    background-color: #FFFFFF;
+    width: 10vmin;
+    border-radius: 50%;
+}
+.social div > img{
+    padding: 5px;
+}
 .social{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-}
-
-.logo-perfil{
-    background-color: #FFFFFF;
-    width: 7vmin;
-    border-radius: 50%;
-}
-
+} 
 .web{
     background-color: #746f6f;
-    width: 90vmin;
-    height: 60px;
-    gap: .5rem;
-    margin-left: 20px;
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: -40px
+    width: 80%;
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .8rem;
+    padding: .3rem .8rem;
+    border-radius: 5px;
+    margin: 2rem 0;
 }
-
 .logo-web{
     background-color: #FFFFFF;
-    width: 18vmin;
     border-radius: 10px;
-    margin: 10px 5px;
+    width: 100%;
+    height: 3rem;
 }
-
 .about{
     margin-top: 30px;
+    text-align: center;
 }
 .about h3{
     color: var(--green);
     margin-bottom: 10px;
+
 }
 .about p{
     margin: 10px 30px;
     color: white;
 }
-
-
-.main h3{
+.servicios h3{
     color: var(--green);
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 .row{
     display: flex;
     gap: .5rem;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -163,11 +130,13 @@ img{
 }
 .row-div{
     width: 200px;
-    height: 180px;
-   
+    height: 240px;
+    text-align: center;
     cursor: pointer;
-
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
 }
 .row-div h4{
     margin-bottom: 5px;
@@ -177,16 +146,11 @@ img{
 }
 
 .row-div img{
-    width: 50px;
+    margin: 0 auto;
+    width: 80px;
     transition: 2s;
     margin-bottom: 5px;
 }
-
-.row-div img:hover{
-    transform: translateX(-30%);
-    filter: brightness(80%);
-}
-
 .habilidades{
     display: flex;
     flex-direction: column;
@@ -194,7 +158,7 @@ img{
     align-items: center;
     margin-top: 30px;
 }
-.habilidades div > h3{
+.habilidades div h3{
     color: var(--green);
     margin-bottom: 20px;
 }
@@ -207,7 +171,6 @@ img{
     width: 200px;
     height: 30px;
     margin-bottom: 5px;
-    
 }
 .contenedores{
     margin: 0 auto;
@@ -217,67 +180,58 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-
 .contenedores img{
     width: 190px;
 }
-
-.portfol div > h3{
+.portfol{
+    padding-bottom: 50px;
+}
+.portfol h3{
     color: var(--green);
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
 }
-
 .contact{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-
-.contact div > h3{
+.contact h3{
     color: var(--green);
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
 }
-
-
 .iconos{
-    margin: 0 100px;
+    width: 80%;
+    max-width: 700px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    border: 1px solid ;
+    padding: 1rem 0;
 }
-
 .iconos article{
-    background: white;
-    text-align: center;
-    width: 150px;
+    width: 200px;
     height: 200px;
+    border: 1px solid;
     text-align: center;
+    background-color: var(--light-grey);
+    border-radius: 10px;
 }
-.iconos article > img{
-    width: 50px;
-    margin-top: 40px;
-}
-.iconos article > h4{
-    margin-top: 10px;
-}
-.iconos article > p{
-    margin-top: 10px;
-}
-
 footer{
     text-align: center;
-    color: var(--green);
-    margin: 80px 50px; 
+    padding: 2rem 0;
 }
 
 
-@media screen and (min-width: 400px) {
+/*
+@media screen and (min-width: 768px) {
 
     .header{
         align-items: center;
@@ -370,3 +324,5 @@ footer{
    
     
 }
+
+*/
