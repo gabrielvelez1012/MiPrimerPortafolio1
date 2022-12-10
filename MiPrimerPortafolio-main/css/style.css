@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Ubuntu&display=swap');
+
+:root{
+    --green: #34B0BE;
+    --light-grey: #D1CECA;
+    --dark-grey: #242635;
+    --white: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color: var(--dark-grey);
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    
+}
+img{
+    max-width: 100%;
+}
+.header{
+    background-color: var(--dark-grey);
+    height: 12vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 5vmin;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 90%;
+    height: 15vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5vmin;
+    gap: 3vmin;
+    transition: 0.5s;
+}
+.items{
+    color: white;
+    text-decoration: none;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    color: white;
+}
+#check:checked ~ .menu{
+    left: 0;
+    transition: 0.5s;
+}
+
+
+#perfil{
+    background-color: var(--dark-grey);
+    height: 40vmax;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5vmax;
+    align-items: center;
+    gap: 5vmin;
+}
+.img-perfil{
+    width: 40vmin;
+
+}
+
+.description{
+    width: 80vmin;
+    height: 20vmax;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.description h1{
+    font-size: 2vmax;
+    color: white;
+}
+.description h1 span{
+    color: var(--green);
+    font-size: 3vmax;
+}
+.description p{
+    color: white;
+    font-size: 2vmax;
+}
+.description p span{
+    color: var(--green);
+    font-size: 2vmax;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.logo-perfil{
+    background-color: #FFFFFF;
+    width: 7vmin;
+    border-radius: 50%;
+}
+
+.web{
+    background-color: #746f6f;
+    width: 90vmin;
+    height: 60px;
+    gap: .5rem;
+    margin-left: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -40px
+}
+
+.logo-web{
+    background-color: #FFFFFF;
+    width: 18vmin;
+    border-radius: 10px;
+    margin: 10px 5px;
+}
+
+.about{
+    margin-top: 30px;
+}
+.about h3{
+    color: var(--green);
+    margin-bottom: 10px;
+}
+.about p{
+    margin: 10px 30px;
+    color: white;
+}
+
+
+.main h3{
+    color: var(--green);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.row{
+    display: flex;
+    gap: .5rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-div{
+    width: 200px;
+    height: 180px;
+   
+    cursor: pointer;
+
+    background-color: white;
+}
+.row-div h4{
+    margin-bottom: 5px;
+}
+.row-div p{
+    font-size: 15px;
+}
+
+.row-div img{
+    width: 50px;
+    transition: 2s;
+    margin-bottom: 5px;
+}
+
+.row-div img:hover{
+    transform: translateX(-30%);
+    filter: brightness(80%);
+}
+
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.habilidades div > h3{
+    color: var(--green);
+    margin-bottom: 20px;
+}
+.habilidades div > p{
+    color: white;
+    display: flex;
+    margin-top: 10px;
+}
+.habilidades div > progress{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 5px;
+    
+}
+.contenedores{
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedores img{
+    width: 190px;
+}
+
+.portfol div > h3{
+    color: var(--green);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact div > h3{
+    color: var(--green);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.iconos{
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.iconos article{
+    background: white;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+}
+.iconos article > img{
+    width: 50px;
+    margin-top: 40px;
+}
+.iconos article > h4{
+    margin-top: 10px;
+}
+.iconos article > p{
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    color: var(--green);
+    margin: 80px 50px; 
+}
+
+
+@media screen and (min-width: 400px) {
+
+    .header{
+        align-items: center;
+    }
+
+    .checkbtn{
+        display: none;
+    }
+    .menu{
+        justify-content: end;
+        left: 0;
+        width: 100%;
+        flex-direction: row;
+        height: 4vmin;
+        transition: 0s;
+    }
+    .items{
+        font-size: 2vmin;
+    }
+    #perfil{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-info{
+        position: relative;
+    }
+
+    .web{
+        height: 150px;
+        width: 80%;
+        margin-left: 120px;
+    }
+
+    .description{
+        position: absolute;
+        right: 200px;
+        top: 0;
+        justify-content: left;
+        text-align: start;
+    }
+
+    .img-perfil{
+        order: 1;
+        width: 50%;
+    }
+
+    .social{
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 10px;
+        margin-right: 800px;
+    }
+    .social div > img{
+        background-color: white;
+        width: 5vmin;
+    }
+    .logo-perfil{
+        width: 14px;
+        border-radius: 50%;
+    }
+    .about{
+        margin-top: 30px;
+        margin: 50px;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        height: 100px;
+        margin-top: 50px;
+        margin-bottom: 95px;
+    }
+
+    .habilidades div > progress{
+        width: 600px;
+    }
+    .contenedores{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .contenedores img{
+        width: 250px;
+    }
+   
+    
+}
