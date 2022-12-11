@@ -8,21 +8,19 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
 </head>
 
 <body>
     <header class="header">
-        <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-        <nav class="menu">
-            <a href="#" class="items">Home</a>
-            <a href="#" class="items">Servicios</a>
-            <a href="#" class="items">Acerca de mí­</a>
-            <a href="#" class="items">Mis habilidades</a>
-            <a href="#" class="items">Mi portafolio</a>
-            <a href="#" class="items">Contacto</a>
+        <i id="btnMenu" class="fa-solid fa-bars"></i>
+        <nav class="" id="nav">
+            <a href="#home" class="items" id="btnHome">Home</a>
+            <a href="#servicios" class="items" id="btnServicios">Servicios</a>
+            <a href="#acerca" class="items" id="btnAcerca">Acerca de mí­</a>
+            <a href="#habilidades" class="items" id="btnHabilidades">Mis habilidades</a>
+            <a href="#portfolio" class="items" id="btnPortfolio">Mi portafolio</a>
+            <a href="#contacto" class="items" id="btnContacto">Contacto</a>
         </nav>
     </header>
     <main>
@@ -33,6 +31,7 @@
                 </div>
                 <div class="description">
                     <h1>Soy<br> <span>Gabriel</span></h1>
+                    <div class="line"></div>
                     <p>Marketing y diseñador UX/UI</p>
                     <p><span>3 años</span> de experiencia</p>
                     <div class="social">
@@ -54,11 +53,11 @@
                     <img src="./Iconos/spotify.svg" alt="" class="logo-web">
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="acerca">
             <h3>Acerca de mí­</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis, ea, dolor, nulla a odio temporibus vero vel excepturi sed non dolores ab quod rerum sunt pariatur blanditiis expedita illo!</p>
         </section>
-        <section class="servicios">
+        <section class="servicios" id="servicios">
             <h3>Servicios</h3>
             <div class="row">
                 <div class="row-div">
@@ -79,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="habilidades">
+        <section class="habilidades" id="habilidades">
             <h3>Mis habilidades</h3>
             <div>
                 <p>Marketing</p>
@@ -94,7 +93,7 @@
                 <progress max="100" value="75"></progress>
             </div> 
         </section>    
-        <section class="portfol">
+        <section class="portfol" id="portfolio">
             <h3>Mis portafolios</h3>
             <div class="contenedores">
                 <img src="./Logos/ejemplo1.jpg" alt="">
@@ -103,7 +102,7 @@
                 <img src="./Logos/ejemplo5.jpg" alt="">
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contacto">
             <h3>Contacto</h3>
             <div class="iconos">
                 <article>
@@ -120,8 +119,13 @@
         </section>
     </main>
     <footer>
+
+        julo
+        jiss
+        alls
         Hecho con ❤️ en Academlo
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

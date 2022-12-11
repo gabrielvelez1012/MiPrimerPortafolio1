@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 img{
     width: 100px;
@@ -20,11 +21,49 @@ body{
     font-family: Montserrat, sans-serif;
 }
 header{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: right;
+    padding: 5px 3px;
+
 }
+#btnMenu{
+    margin: 5px 30px;
+}
+
+nav{
+    position: fixed;
+    color: white;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey);
+    padding: 2rem 1rem;
+    bottom: 0;
+    left: -100vw;
+    
+    transition: left .3s linear;
+    z-index: 100;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.show{
+    left: 0;
+}
+
+
 section {
     width: 100%;
-    border: 1px solid white;
+    
 }
 .section-info{
     display: flex;
@@ -53,6 +92,12 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
+    max-width: 450px;
+}
+.line{
+    border: 1.5px solid white;
+    background-color: white;
+
 }
 .description h1{
     font-size: 5vmax;
@@ -87,6 +132,7 @@ section {
 .web{
     background-color: #746f6f;
     width: 80%;
+    max-width: 700px;
     gap: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -94,6 +140,7 @@ section {
     padding: .3rem .8rem;
     border-radius: 5px;
     margin: 2rem 0;
+    text-align: center;
 }
 .logo-web{
     background-color: #FFFFFF;
@@ -102,8 +149,11 @@ section {
     height: 3rem;
 }
 .about{
+    margin: 0 auto;
     margin-top: 30px;
     text-align: center;
+    max-width: 650px;
+    
 }
 .about h3{
     color: var(--green);
@@ -113,6 +163,7 @@ section {
 .about p{
     margin: 10px 30px;
     color: white;
+    font-size: 14px;
 }
 .servicios h3{
     color: var(--green);
@@ -122,11 +173,16 @@ section {
 }
 .row{
     display: flex;
-    gap: .5rem;
+    gap: 3rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 .row-div{
     width: 200px;
@@ -156,7 +212,13 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin: 0 auto;
     margin-top: 30px;
+    width: 100%;
+    max-width: 700px;
+}
+.habilidades div{
+    width: 80%;
 }
 .habilidades div h3{
     color: var(--green);
@@ -168,17 +230,24 @@ section {
     margin-top: 10px;
 }
 .habilidades div > progress{
-    width: 200px;
+    width: 100%;
     height: 30px;
     margin-bottom: 5px;
+
+}
+.habilidades h3{
+    color: var(--green);
 }
 .contenedores{
     margin: 0 auto;
     display: flex;
-    gap: 1.5rem;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    width: 90%;
+    max-width: 900px;
 }
 .contenedores img{
     width: 190px;
@@ -213,13 +282,13 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    border: 1px solid ;
+   
     padding: 1rem 0;
 }
 .iconos article{
     width: 200px;
     height: 200px;
-    border: 1px solid;
+    
     text-align: center;
     background-color: var(--light-grey);
     border-radius: 10px;
@@ -227,102 +296,115 @@ section {
 footer{
     text-align: center;
     padding: 2rem 0;
+    color: white;
+    font-size: 12px;
 }
 
 
-/*
-@media screen and (min-width: 768px) {
 
-    .header{
-        align-items: center;
-    }
+@media screen and (min-width: 900px) {
 
-    .checkbtn{
-        display: none;
-    }
-    .menu{
-        justify-content: end;
-        left: 0;
-        width: 100%;
-        flex-direction: row;
-        height: 4vmin;
-        transition: 0s;
-    }
-    .items{
-        font-size: 2vmin;
-    }
-    #perfil{
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .section-info{
+    .perfil{
+        flex-direction: row-reverse;
+        width: 1400px;
         position: relative;
+        padding-top: 2rem;
     }
+    
 
-    .web{
-        height: 150px;
-        width: 80%;
-        margin-left: 120px;
+    .img-perfil img{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
     }
 
     .description{
         position: absolute;
-        right: 200px;
-        top: 0;
-        justify-content: left;
-        text-align: start;
+        top: 30px;
+        text-align: left;
+        left: 200px;
+        
+    }
+    .description h1{
+        font-size: 48px;
+    }
+    .description h1 > span{
+        font-size: 56px;
+    }
+    .description p{
+        font-size: 24px;
+    }
+    .description p > span{
+        font-size: 24px;    
     }
 
-    .img-perfil{
-        order: 1;
-        width: 50%;
+    .web{
+        height: 120px;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 70px;
+        margin-top: -60px;
+        z-index: 40;
     }
-
-    .social{
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 10px;
-        margin-right: 800px;
-    }
-    .social div > img{
-        background-color: white;
-        width: 5vmin;
-    }
-    .logo-perfil{
-        width: 14px;
-        border-radius: 50%;
-    }
-    .about{
-        margin-top: 30px;
-        margin: 50px;
-    }
-
-    .row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
+    .web img{
+        width: 140px;
         height: 100px;
-        margin-top: 50px;
-        margin-bottom: 95px;
     }
 
-    .habilidades div > progress{
-        width: 600px;
+    .about p{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .about h3{
+        font-size: 36px;
+    }
+
+    .servicios h3{
+        font-size: 36px;
+    }
+
+    .habilidades h3{
+        font-size: 36px;
+    }
+    .portfol h3{
+        font-size: 36px;
     }
     .contenedores{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.5rem;
+        width: 100%;
+        max-width: 900px;
     }
     .contenedores img{
-        width: 250px;
-    }
-   
-    
-}
+        width: 350px;
 
-*/
+    }
+    .contact h3{
+        font-size: 36px;
+    }
+    .line{
+        position: absolute;
+        background-color: white;
+        border: 1.5px solid white;
+        left: 0;
+        top: 60px;
+        width: 230px;
+}
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: .2rem;
+        justify-content: end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 1.5rem;
+    }
+    nav a{
+        width: 180px;
+    }
+    nav a:hover{
+        color: var(--green);
+    }
+}
